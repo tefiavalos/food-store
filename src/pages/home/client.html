@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/shared.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Food Store</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Food Store</h1>
+
+      <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Mis Pedidos</a>
+        <a href="#">Carrito</a>
+        <a href="./admin.html">Panel Admin</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside>
+        <h2>Categorías</h2>
+
+        <ul id="lista-categorias"></ul>
+      </aside>
+
+      <main>
+        <section class="buscador">
+          <form>
+            <input type="search" placeholder="Buscar productos..." />
+            <button type="submit">Buscar</button>
+          </form>
+        </section>
+
+        <section id="contenedor-productos"></section>
+      </main>
+    </div>
+
+    <footer>
+      <p>Contacto: foodstore@email.com</p>
+    </footer>
+
+    <script type="module" src="./dist/main.js"></script>
+  </body>
+</html>
