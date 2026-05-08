@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="./css/shared.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="/src/styles/shared.css" />
+    <link rel="stylesheet" href="./home.css" />
 
     <title>Food Store</title>
   </head>
@@ -19,6 +19,9 @@
         <a href="#">Mis Pedidos</a>
         <a href="#">Carrito</a>
         <a href="./admin.html">Panel Admin</a>
+        <a href="/src/pages/cart/cart.html">
+          Carrito (<span id="cart-count">0</span>)
+        </a>
       </nav>
     </header>
 
@@ -26,18 +29,23 @@
       <aside>
         <h2>Categorías</h2>
 
-        <ul id="lista-categorias"></ul>
+        <ul id="categories-list"></ul>
       </aside>
 
       <main>
-        <section class="buscador">
+        <section class="search">
           <form>
-            <input type="search" placeholder="Buscar productos..." />
-            <button type="submit">Buscar</button>
+            <input
+              id="search-input"
+              type="search"
+              placeholder="Buscar productos..."
+            />
           </form>
         </section>
 
-        <section id="contenedor-productos"></section>
+        <section id="products-container" class="products-container"></section>
+
+        <div id="toast-container"></div>
       </main>
     </div>
 
@@ -45,6 +53,6 @@
       <p>Contacto: foodstore@email.com</p>
     </footer>
 
-    <script type="module" src="./dist/main.js"></script>
+    <script type="module" src="./home.ts"></script>
   </body>
 </html>

@@ -1,3 +1,3 @@
-import type { Categoria } from "../types/producto";
+import type { Category } from "../types/product";
 
-export const categorias: Categoria[] = ["Hamburguesas", "Pizzas", "Bebidas"];
+export const categories: Category[] = ["Hamburguesas", "Pizzas", "Bebidas"];

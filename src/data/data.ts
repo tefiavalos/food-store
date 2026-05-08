@@ -1,22 +1,33 @@
-import type { Producto } from "../types/producto";
+import type { Product } from "../types/product";
 
-export const productos: Producto[] = [
+export const products: Product[] = [
   {
     id: 1,
-    nombre: "Hamburguesa",
-    descripcion: "Hamburguesa con queso",
-    precio: 10,
-    imagen:
+
+    name: "Hamburguesa",
+
+    description: "Hamburguesa con queso",
+
+    price: 10,
+
+    image:
       "https://placehold.org/150x150/13acac/000000?text=placeholder%22%20alt=%22Placeholder%20personalizado",
-    categoria: "Hamburguesas",
+
+    category: "Hamburguesas",
   },
+
   {
     id: 2,
-    nombre: "Pizza",
-    descripcion: "Pizza de muzzarella",
-    precio: 12,
-    imagen:
+
+    name: "Pizza",
+
+    description: "Pizza de muzzarella",
+
+    price: 12,
+
+    image:
       "https://placehold.org/150x150/13acac/000000?text=placeholder%22%20alt=%22Placeholder%20personalizado",
-    categoria: "Pizzas",
+
+    category: "Pizzas",
   },
 ];
