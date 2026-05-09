@@ -50,8 +50,8 @@ export const updateCartCount = () => {
 
   const cart = getCart();
 
-  const totalProducts = cart.reduce((acc, item) => {
-    return acc + item.quantity;
+  const totalProducts = cart.reduce((accumulator, item) => {
+    return accumulator + item.quantity;
   }, 0);
 
   cartCountElement.textContent = totalProducts.toString();

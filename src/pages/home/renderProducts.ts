@@ -4,14 +4,14 @@ import { addToCart, updateCartCount } from "../../utils/cart";
 
 import { showToast } from "../../utils/showToast";
 
-export const renderProducts = (productos: Product[]) => {
+export const renderProducts = (products: Product[]) => {
   const productsContainer = document.getElementById("products-container");
 
   if (!productsContainer) return;
 
   productsContainer.innerHTML = "";
 
-  if (productos.length === 0) {
+  if (products.length === 0) {
     productsContainer.innerHTML = `
       <p>No se encontraron productos</p>
     `;
@@ -19,22 +19,22 @@ export const renderProducts = (productos: Product[]) => {
     return;
   }
 
-  productos.forEach((producto) => {
+  products.forEach((product) => {
     const article = document.createElement("article");
 
     article.classList.add("product-card");
 
     article.innerHTML = `
       <img
-        src="${producto.image}"
-        alt="${producto.name}"
+        src="${product.image}"
+        alt="${product.name}"
       />
 
-      <h3>${producto.name}</h3>
+      <h3>${product.name}</h3>
 
-      <p>${producto.description}</p>
+      <p>${product.description}</p>
 
-      <span>$${producto.price}</span>
+      <span>$${product.price}</span>
 
       <button class="btn-add">
         Agregar
@@ -42,11 +42,11 @@ export const renderProducts = (productos: Product[]) => {
     `;
 
     article.querySelector(".btn-add")?.addEventListener("click", () => {
-      addToCart(producto);
+      addToCart(product);
 
       updateCartCount();
 
-      showToast(`Agregaste: ${producto.name}`, "success");
+      showToast(`Agregaste: ${product.name}`, "success");
     });
 
     productsContainer.appendChild(article);

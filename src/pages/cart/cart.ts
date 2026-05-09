@@ -34,33 +34,33 @@ const renderCart = () => {
     article.classList.add("cart-item");
 
     article.innerHTML = `
-  <div class="cart-item-info">
-    <h3>${product.name}</h3>
+      <div class="cart-item-info">
+        <h3>${product.name}</h3>
 
-    <p>Precio: $${product.price}</p>
+        <p>Precio: $${product.price}</p>
 
-    <p>
-      Subtotal:
-      $${product.price * product.quantity}
-    </p>
-  </div>
+        <p>
+          Subtotal:
+          $${product.price * product.quantity}
+        </p>
+      </div>
 
-  <div class="cart-actions">
-    <button class="btn-decrease">
-      -
-    </button>
+      <div class="cart-actions">
+        <button class="btn-decrease">
+          -
+        </button>
 
-    <span>${product.quantity}</span>
+        <span>${product.quantity}</span>
 
-    <button class="btn-increase">
-      +
-    </button>
+        <button class="btn-increase">
+          +
+        </button>
 
-    <button class="btn-remove">
-      Borrar
-    </button>
-  </div>
-`;
+        <button class="btn-remove">
+          Borrar
+        </button>
+      </div>
+    `;
 
     article.querySelector(".btn-increase")?.addEventListener("click", () => {
       increaseQuantity(product.id);

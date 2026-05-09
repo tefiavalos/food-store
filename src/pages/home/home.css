@@ -52,6 +52,10 @@ aside {
   padding: 10px;
 }
 
+.categories-title {
+  margin-bottom: 15px;
+}
+
 .products-container {
   display: grid;
 
@@ -72,6 +76,12 @@ aside {
   transition:
     transform 0.2s,
     box-shadow 0.2s;
+
+  display: flex;
+
+  flex-direction: column;
+
+  height: 100%;
 }
 
 .product-card:hover {
@@ -104,6 +114,10 @@ aside {
   margin-bottom: 15px;
 
   font-weight: 700;
+}
+
+.product-card button {
+  margin-top: auto;
 }
 
 .btn-add {
